@@ -1,0 +1,30 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+.sortCon {
+}
+.pt100 {
+	padding-top: 70px;
+}
+.vh85 {
+	height: 88dvh;
+}
+.processCon {
+	border: 1px rgb(232, 191, 191) solid;
+	border-bottom: transparent;
+}
+.itemsContainer {
+	border: 1px red solid;
+	border-top: transparent;
+	height: 88%;
+}
+.arritem {
+	max-width: 40px;
+	background-color: white;
+	/* border: 5px transparent solid; */
+	transition: all 500ms ease;
+}

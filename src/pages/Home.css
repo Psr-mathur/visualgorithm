@@ -1,0 +1,174 @@
+/* Reset some default styles to improve consistency */
+.home * {
+	margin: 0;
+	padding: 0;
+}
+
+.home {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: rgb(179, 184, 188);
+	color: #484848;
+}
+
+/* Hero Section */
+.hero {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.hero h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #0088cc;
+}
+
+/* Introduction */
+.introduction {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+.introduction h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #0088cc;
+}
+
+.introduction p {
+	margin-bottom: 15px;
+}
+
+/* Algorithm Previews */
+.algorithm-previews {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.algorithm-preview {
+	margin-bottom: 30px;
+}
+
+.algorithm-preview h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #0088cc;
+}
+
+.algorithm-preview img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+/* Key Features */
+.key-features {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.key-features h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #0088cc;
+}
+
+.key-features ul {
+	list-style: none;
+}
+
+.key-features li {
+	margin-bottom: 10px;
+}
+
+/* Educational Value */
+.educational-value {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+.educational-value h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #0088cc;
+}
+
+/* Call-to-Action (CTA) */
+.cta {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.cta h2 {
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #0088cc;
+}
+
+.btn-cta {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: #0088cc;
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.btn-cta:hover {
+	background-color: #0073aa;
+}
+
+/* Inspirational Quotes or Testimonials */
+.quotes {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.quotes h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #0088cc;
+}
+
+blockquote {
+	margin-bottom: 30px;
+	padding: 20px;
+	background-color: #f1f1f1;
+	border-left: 4px solid #0088cc;
+}
+
+blockquote cite {
+	display: block;
+	margin-top: 10px;
+	font-style: italic;
+}
+
+/* Footer */
+.footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #0088cc;
+	color: #fff;
+}
+
+.footer nav {
+	margin-bottom: 10px;
+}
+
+.footer nav a {
+	color: #fff;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.footer nav a:hover {
+	text-decoration: underline;
+}
