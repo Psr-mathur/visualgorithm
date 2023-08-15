@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { InputContext } from "../context/inputContext";
 
 function delay(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
@@ -89,16 +90,17 @@ async function Sort(arr) {
 }
 
 const Mergesort = () => {
-	let arrlen = 10;
+	const { getLength, setLength } = useContext(InputContext);
 	const [arr, setArr] = useState([]);
+	const [isSorting, setIsSorting] = useState(false);
 	let items = document.querySelectorAll(".arritem");
 	useEffect(() => {
 		const newArray = [];
-		for (let i = 0; i < arrlen; i++) {
+		for (let i = 0; i < getLength; i++) {
 			newArray.push(Math.floor(Math.random() * 95) + 5);
 		}
 		setArr(newArray);
-	}, []);
+	}, [getLength]);
 
 	useEffect(() => {
 		// console.log("ins");
@@ -110,16 +112,27 @@ const Mergesort = () => {
 
 	const handleClick = () => {
 		console.log("clicked");
-		Sort(arr).then((arr) => setArr(() => arr));
+		setIsSorting(true);
+		Sort(arr)
+			.then((sortedArray) => setArr(sortedArray))
+			.catch((error) => {
+				console.error("Sort error:", error);
+			})
+			.finally(() => {
+				setIsSorting(false);
+			});
 	};
+
 	const genrater = () => {
+		setArr([]);
+		Sort(arr);
 		items = document.querySelectorAll(".arritem");
 		items.forEach((item, index) => {
 			item.style.backgroundColor = "white";
 			item.style.height = `${arr[index]}%`;
 		});
 		const newArray = [];
-		for (let i = 0; i < arrlen; i++) {
+		for (let i = 0; i < getLength; i++) {
 			newArray.push(Math.floor(Math.random() * 95) + 5);
 		}
 		setArr(newArray);
@@ -127,11 +140,14 @@ const Mergesort = () => {
 
 	console.count("ren");
 	return (
-		<div className="container-fluid px-5 vh85 bg-secondary py-lg-3 sortMainCon">
-			<p className="processCon w-100 text-center text-capitalize text-white fs-3">
+		<div className="container-fluid px-lg-5 vh-100 CustomCon">
+			<p className=" text-center text-uppercase text-danger fs-6">
+				Merge Sort
+			</p>
+			<p className="processCon w-100 text-center text-capitalize text-white fs-4">
 				click button to sort
 			</p>
-			<div className="container-fluid d-flex gap-2 align-items-end justify-content-center itemsContainer w-100 pb-3 sortCon">
+			<div className="itemsContainer container-fluid d-flex gap-2 align-items-end justify-content-center w-100 pb-3">
 				{arr.map((val, index) => {
 					return (
 						<div key={index} className="arritem w-25 text-center">
@@ -140,9 +156,31 @@ const Mergesort = () => {
 					);
 				})}
 			</div>
-			<div className="">
-				<button onClick={handleClick}>Sort</button>
-				<button onClick={genrater}>Generate new array</button>
+			<div className=" px-2 d-flex gap-4 py-2">
+				<div>
+					<label htmlFor="length" className=" fw-bold">
+						Array Length :&nbsp;
+					</label>
+					<input
+						type="number"
+						min={3}
+						max={window.innerWidth <= 568 ? 10 : 30}
+						value={getLength}
+						className=" px-3 py-1 bg-transparent text-dark"
+						name="length"
+						onChange={(e) => setLength(e.target.value)}
+						readOnly={isSorting}
+					/>
+				</div>
+				<button
+					className=" btn btn-outline-light"
+					onClick={handleClick}
+				>
+					Sort
+				</button>
+				<button className=" btn btn-outline-light" onClick={genrater}>
+					Generate new array
+				</button>
 			</div>
 		</div>
 	);

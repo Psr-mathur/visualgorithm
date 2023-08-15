@@ -5,26 +5,39 @@
 	margin: 0;
 	padding: 0;
 }
-.sortCon {
+.CustomCon {
+	background-color: rgba(119, 136, 153, 0.5);
+	padding-top: 100px;
 }
 .pt100 {
 	padding-top: 70px;
-}
-.vh85 {
-	height: 88dvh;
 }
 .processCon {
 	border: 1px rgb(232, 191, 191) solid;
 	border-bottom: transparent;
 }
+@media screen and (width<=568px) {
+	.processCon {
+		height: 60px;
+	}
+}
 .itemsContainer {
 	border: 1px red solid;
 	border-top: transparent;
-	height: 88%;
+	height: 80%;
+}
+@media screen and (width<=568px) {
+	.itemsContainer {
+		height: 74%;
+	}
 }
 .arritem {
 	max-width: 40px;
 	background-color: white;
 	/* border: 5px transparent solid; */
 	transition: all 500ms ease;
+}
+input {
+	width: 75px;
+	outline: none;
 }

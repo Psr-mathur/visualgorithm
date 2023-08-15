@@ -7,7 +7,7 @@ const Home = () => {
 		<div className="home">
 			<section className="hero">
 				<h1>Explore Algorithms in Action!</h1>
-				<img src="hero-image.png" alt="Sorting Algorithms" />
+				{/* <img src="hero-image.png" alt="Sorting Algorithms" /> */}
 			</section>
 
 			<section className="introduction">
@@ -28,14 +28,11 @@ const Home = () => {
 				<h2>Sorting Algorithms at a Glance</h2>
 				<div className="algorithm-preview">
 					<h3>
-						<Link
-							style={{ textDecoration: "none" }}
-							to="/selectionsort"
-						>
+						<Link style={{}} to="/selectionsort">
 							Selection Sort
 						</Link>
 					</h3>
-					<img src="selection-sort.gif" alt="Selection Sort" />
+					{/* <img src="selection-sort.gif" alt="Selection Sort" /> */}
 					<p>
 						Selection sort is a simple comparison-based sorting
 						algorithm. It repeatedly selects the smallest element
@@ -44,14 +41,11 @@ const Home = () => {
 				</div>
 				<div className="algorithm-preview">
 					<h3>
-						<Link
-							style={{ textDecoration: "none" }}
-							to="/bubblesort"
-						>
+						<Link style={{}} to="/bubblesort">
 							Bubble Sort
 						</Link>
 					</h3>
-					<img src="bubble-sort.gif" alt="Bubble Sort" />
+					{/* <img src="bubble-sort.gif" alt="Bubble Sort" /> */}
 					<p>
 						Bubble sort is a comparison-based algorithm where
 						adjacent elements are compared and swapped if they are
@@ -60,14 +54,11 @@ const Home = () => {
 				</div>
 				<div className="algorithm-preview">
 					<h3>
-						<Link
-							style={{ textDecoration: "none" }}
-							to="/mergesort"
-						>
+						<Link style={{}} to="/mergesort">
 							Merge Sort
 						</Link>
 					</h3>
-					<img src="merge-sort.gif" alt="Merge Sort" />
+					{/* <img src="merge-sort.gif" alt="Merge Sort" /> */}
 					<p>
 						Merge sort is a divide-and-conquer algorithm that
 						divides the array into two halves, sorts them
@@ -121,12 +112,12 @@ const Home = () => {
 					<Link to="/about">About Us</Link>
 					<Link to="/">Algorithm Descriptions</Link>
 					<Link to="/">Contact</Link>
-					<Link
-						href="https://github.com/yourusername/sorting-visualization"
+					<a
+						href="https://github.com/Psr-mathur/visualgorithm"
 						target="_blank"
 					>
 						GitHub Repository
-					</Link>
+					</a>
 				</nav>
 				<p>
 					&copy; 2023 Sorting Algorithm Visualizer. All rights
