@@ -124,8 +124,6 @@ const Mergesort = () => {
 	};
 
 	const genrater = () => {
-		setArr([]);
-		Sort(arr);
 		items = document.querySelectorAll(".arritem");
 		items.forEach((item, index) => {
 			item.style.backgroundColor = "white";
@@ -175,10 +173,15 @@ const Mergesort = () => {
 				<button
 					className=" btn btn-outline-light"
 					onClick={handleClick}
+					disabled={isSorting}
 				>
 					Sort
 				</button>
-				<button className=" btn btn-outline-light" onClick={genrater}>
+				<button
+					className=" btn btn-outline-light"
+					onClick={genrater}
+					disabled={isSorting}
+				>
 					Generate new array
 				</button>
 			</div>

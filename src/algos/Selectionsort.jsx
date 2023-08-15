@@ -134,10 +134,15 @@ const Selectionsort = () => {
 				<button
 					className=" btn btn-outline-light"
 					onClick={handleClick}
+					disabled={isSorting}
 				>
 					Sort
 				</button>
-				<button className=" btn btn-outline-light" onClick={genrater}>
+				<button
+					className=" btn btn-outline-light"
+					onClick={genrater}
+					disabled={isSorting}
+				>
 					Generate new array
 				</button>
 			</div>
